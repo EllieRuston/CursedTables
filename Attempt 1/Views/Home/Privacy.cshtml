@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Hover Effects";
+}
+
+<style>
+    .beffect{
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    h2{
+        color: hsl(0,0%,30%);
+        font-size: 50px;
+        font-weight:bold;
+        font-family: monospace;
+        letter-spacing: 7px;
+        cursor: pointer;
+    }
+
+    h2:hover span:nth-child(1){
+        margin-right:5px;
+    }
+
+    h2:hover span:nth-child(1):after {
+        content: "'"
+    }
+
+    h2:hover span:nth-child(2) {
+        margin-left: 30px;
+    }
+    h2:hover span{
+            color: hsl(0,0%,100%);
+            text-shadow: 0 0 10px hsl(0,0%, 100%), 0 0 20px hsl(0,0%,100%), 0 0 40px hsl(0,0%, 100%);
+    }
+    h2 span{
+        transition: 0.5s  ease-out;
+    }
+</style>
+<div>
+	<h1>@ViewData["Title"]</h1>
+	<div class="beffect">
+	 <h2><span>I</span>M<span>POSSIBLE</span></h2>
+	</div>
+</div>
